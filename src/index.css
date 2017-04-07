@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  width: 500px;
+  height: 600px;
+  border: 2px solid Black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  border: 2px solid Black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+}
+
+.revealed.boy, .matched.boy {
+  background-image: url('images/boy.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.revealed.boy2, .matched.boy2 {
+  background: url('images/boy2.svg') no-repeat center;
+}
+
+.revealed.girl, .matched.girl {
+  background: url('images/girl.svg') no-repeat center;
+}
+
+.revealed.girl2, .matched.girl2 {
+  background: url('images/girl2.svg') no-repeat center;
+}
+
+.revealed.man1, .matched.man1 {
+  background: url('images/man1.svg') no-repeat center;
+}
+
+.revealed.man2, .matched.man2 {
+  background: url('images/man2.svg') no-repeat center;
+}
+
+.revealed.man3, .matched.man3 {
+  background: url('images/man3.svg') no-repeat center;
+}
+
+.revealed.man4, .matched.man4 {
+  background: url('images/man4.svg') no-repeat center;
+}
+
+/*.revealed.man5, .matched.man5 {
+  background: url('images/man5.svg') no-repeat center;
+}*/
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+body:not(.modal) .overlay {
+  /*display: none;
+}
+
+body.modal main {
+  filter: blur(5px);
+}*/
+
+.dialog {
+  background-color: LavenderBlush;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px #333;
+  font-family: Gotham;
+  border-radius: 8px;
+}
