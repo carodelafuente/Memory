@@ -3,6 +3,7 @@ import Card from './Card';
 import './index.css';
 import Modal from './Modal'
 import Title from './Title'
+import Footer from './Footer'
 
 class App extends Component {
   state = {
@@ -24,6 +25,7 @@ class App extends Component {
       })
     }
   }
+
 
   checkForMatch = (i) => {
     if (this.state.moves[this.state.picks[0]] === this.state.moves[this.state.picks[1]]) {
@@ -77,6 +79,10 @@ class App extends Component {
       <Card index={14} value={this.state.moves[14]} revealed={this.state.picks.includes(14)} matches={this.state.matches.includes(14)} flipCard={this.flipCard} />
       <Card index={15} value={this.state.moves[15]} revealed={this.state.picks.includes(15)} matches={this.state.matches.includes(15)} flipCard={this.flipCard} />
     </div>
+
+    <div className='footer'>
+      <Footer />
+     </div>
         </div>
       )
     }

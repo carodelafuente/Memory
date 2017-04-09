@@ -26,7 +26,7 @@ div .title .letter {
   justify-content: center;
   align-items: center;
   color: #333;
-  background-color: rgba(255, 222, 0, 0.5);
+  background-color: rgba(255, 222, 0, 0.3);
   border-radius: 4px;
   width: 10px;
   height: 20px;
@@ -34,6 +34,8 @@ div .title .letter {
   margin: 5px;
   font-family: Courier New;
   font-size: 32px;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
+
 }
 
 div .title .letter2 {
@@ -50,12 +52,16 @@ div .title .letter2 {
   margin: 5px;
   font-family: Courier New;
   font-size: 32px;
+  /*-webkit-box-shadow: 40px 33px 51px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 40px 33px 51px -14px rgba(0,0,0,0.75);*/
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
+
 
 .container {
   width: 470px;
   height: 500px;
-  /*border: 1px solid rgba(70, 130, 180, 1);*/
+  /*border: 2px solid rgba(70, 130, 180, 0.3);*/
   /*background-color: SteelBlue;*/
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +70,7 @@ div .title .letter2 {
 }
 
 .card {
-  background-color: rgba(0, 101, 143, 1);
+  background-color: rgba(0, 101, 143, 0.7);
   border-radius: 100px;
   width: 100px;
   height: 100px;
@@ -78,34 +84,42 @@ div .title .letter2 {
   background-repeat: no-repeat;
   width: 100px;
   height: 100px;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.boy2, .matched.boy2 {
   background: url('images/boy2.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.girl, .matched.girl {
   background: url('images/girl.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.girl2, .matched.girl2 {
   background: url('images/girl2.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.man1, .matched.man1 {
   background: url('images/man1.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.man2, .matched.man2 {
   background: url('images/man2.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.man3, .matched.man3 {
   background: url('images/man3.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 .revealed.man4, .matched.man4 {
   background: url('images/man4.svg') no-repeat center;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
 /*.revealed.man5, .matched.man5 {
@@ -119,7 +133,7 @@ div .title .letter2 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: hsla(0, 0%, 0%, 0.5);
+  background-color: hsla(0, 0%, 0%, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,9 +144,17 @@ body:not(.modal) .overlay {
   /*display: none;
 }
 
-body.modal main {
+ body.modal main {
   filter: blur(5px);
 }*/
+
+.overlay: not(.dialog) {
+  /*filter: blur(5px);
+  opacity: 0.5;*/
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  filter: blur(20px);
+}
 
 .dialog {
   background-color: LavenderBlush;
@@ -143,4 +165,10 @@ body.modal main {
   box-shadow: 0 0 20px #333;
   font-family: Gotham;
   border-radius: 8px;
+}
+
+.footer {
+  font-family: Gotham;
+  font-size: 11px;
+  margin-top: 10px;
 }
