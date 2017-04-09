@@ -4,13 +4,59 @@ body {
   font-family: sans-serif;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10px;
+}
+
+div .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div .title {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+div .title .letter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: rgba(255, 222, 0, 0.5);
+  border-radius: 4px;
+  width: 10px;
+  height: 20px;
+  padding: 10px;
+  margin: 5px;
+  font-family: Courier New;
+  font-size: 32px;
+}
+
+div .title .letter2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #ffde00;
+  border-radius: 4px;
+  width: 10px;
+  height: 20px;
+  padding: 10px;
+  margin: 5px;
+  font-family: Courier New;
+  font-size: 32px;
 }
 
 .container {
-  width: 500px;
-  height: 600px;
-  border: 2px solid Black;
+  width: 470px;
+  height: 500px;
+  /*border: 1px solid rgba(70, 130, 180, 1);*/
+  /*background-color: SteelBlue;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -18,10 +64,12 @@ body {
 }
 
 .card {
-  border: 2px solid Black;
+  background-color: rgba(0, 101, 143, 1);
+  border-radius: 100px;
   width: 100px;
   height: 100px;
   display: flex;
+  padding: 7px;
 }
 
 .revealed.boy, .matched.boy {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import './index.css';
 import Modal from './Modal'
+import Title from './Title'
 
 class App extends Component {
   state = {
@@ -45,15 +46,20 @@ class App extends Component {
         picks: []
       })
     }, 1000)
-
   }
+
 
   render() {
     if (this.state.gameOver) {
-      return <Modal/>
+      return <Modal />
     } else {
       return (
-      <div className="container">
+        <div className="main">
+      <div className="title">
+      <Title />
+      </div>
+
+    <div className="container">
       <Card index={0} value={this.state.moves[0]} revealed={this.state.picks.includes(0)} matches={this.state.matches.includes(0)} flipCard={this.flipCard} />
       <Card index={1} value={this.state.moves[1]} revealed={this.state.picks.includes(1)} matches={this.state.matches.includes(1)} flipCard={this.flipCard} />
       <Card index={2} value={this.state.moves[2]} revealed={this.state.picks.includes(2)} matches={this.state.matches.includes(2)} flipCard={this.flipCard} />
@@ -70,7 +76,8 @@ class App extends Component {
       <Card index={13} value={this.state.moves[13]} revealed={this.state.picks.includes(13)} matches={this.state.matches.includes(13)} flipCard={this.flipCard} />
       <Card index={14} value={this.state.moves[14]} revealed={this.state.picks.includes(14)} matches={this.state.matches.includes(14)} flipCard={this.flipCard} />
       <Card index={15} value={this.state.moves[15]} revealed={this.state.picks.includes(15)} matches={this.state.matches.includes(15)} flipCard={this.flipCard} />
-      </div>
+    </div>
+        </div>
       )
     }
   }
