@@ -52,8 +52,6 @@ div .title .letter2 {
   margin: 5px;
   font-family: Courier New;
   font-size: 32px;
-  /*-webkit-box-shadow: 40px 33px 51px -14px rgba(0,0,0,0.75);
-  -moz-box-shadow: 40px 33px 51px -14px rgba(0,0,0,0.75);*/
   box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
@@ -61,8 +59,6 @@ div .title .letter2 {
 .container {
   width: 470px;
   height: 500px;
-  /*border: 2px solid rgba(70, 130, 180, 0.3);*/
-  /*background-color: SteelBlue;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -122,10 +118,6 @@ div .title .letter2 {
   box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
-/*.revealed.man5, .matched.man5 {
-  background: url('images/man5.svg') no-repeat center;
-}*/
-
 
 .overlay {
   position: fixed;
@@ -139,18 +131,7 @@ div .title .letter2 {
   justify-content: center;
 }
 
-/*
-body:not(.modal) .overlay {
-  /*display: none;
-}
-
- body.modal main {
-  filter: blur(5px);
-}*/
-
-.overlay: not(.dialog) {
-  /*filter: blur(5px);
-  opacity: 0.5;*/
+.overlay:not(.dialog) {
   -webkit-filter: blur(20px);
   -moz-filter: blur(20px);
   filter: blur(20px);

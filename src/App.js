@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Card from './Card';
-import './index.css';
 import Modal from './Modal'
 import Title from './Title'
 import Footer from './Footer'
@@ -14,7 +13,7 @@ class App extends Component {
   }
 
   flipCard = (flip) => {
-    if (this.state.picks.includes(flip)) return
+    if (this.state.picks.includes(flip) || this.state.matches.includes(flip)) return
     if (this.state.picks.length < 2) {
       this.setState({
         picks: [...this.state.picks, flip]
@@ -25,6 +24,7 @@ class App extends Component {
       })
     }
   }
+
 
 
   checkForMatch = (i) => {
