@@ -72,14 +72,13 @@ div .title .letter2 {
   height: 100px;
   display: flex;
   padding: 7px;
+  box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
+  transform-style: preserve-3d;
+  transition: opacity, background-color 1s linear;
 }
 
 .revealed.boy, .matched.boy {
-  background-image: url('images/boy.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
+  background: url('images/boy.svg') no-repeat center;
   box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.4);
 }
 
@@ -119,7 +118,7 @@ div .title .letter2 {
 }
 
 
-.overlay {
+/*.overlay {
   position: fixed;
   top: 0;
   right: 0;
@@ -129,13 +128,29 @@ div .title .letter2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}*/
+
+.overlay {
+  position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-color: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.overlay:not(.dialog) {
+/*dialog.modal main {
+  filter: blur(5px);
+}*/
+
+/*.overlay:not(.dialog) {
   -webkit-filter: blur(20px);
   -moz-filter: blur(20px);
   filter: blur(20px);
-}
+}*/
 
 .dialog {
   background-color: LavenderBlush;
